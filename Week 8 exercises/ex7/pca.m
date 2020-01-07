@@ -4,12 +4,12 @@ function [U, S] = pca(X)
 %   Returns the eigenvectors U, the eigenvalues (on diagonal) in S
 %
 
-% Useful values
-[m, n] = size(X);
+  % Useful values
+  [m, n] = size(X);
 
-% You need to return the following variables correctly.
-U = zeros(n);
-S = zeros(n);
+  % You need to return the following variables correctly.
+  U = zeros(n);
+  S = zeros(n);
 
 % ====================== YOUR CODE HERE ======================
 % Instructions: You should first compute the covariance matrix. Then, you
@@ -20,12 +20,9 @@ S = zeros(n);
 %       number of examples).
 %
 
-
-
-
-
-
-
+  sigma = (X' * X) ./ m;
+  [U, S, V] = svd(sigma);
+  
 % =========================================================================
 
 end

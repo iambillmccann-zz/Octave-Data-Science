@@ -35,7 +35,7 @@ load ('ex7data1.mat');
 plot(X(:, 1), X(:, 2), 'bo');
 axis([0.5 6.5 2 8]); axis square;
 
-fprintf('Program paused. Press enter to continue.\n');
+fprintf('Part 1. Program paused. Press enter to continue.\n');
 pause;
 
 
@@ -64,7 +64,7 @@ fprintf('Top eigenvector: \n');
 fprintf(' U(:,1) = %f %f \n', U(1,1), U(2,1));
 fprintf('\n(you should expect to see -0.707107 -0.707107)\n');
 
-fprintf('Program paused. Press enter to continue.\n');
+fprintf('Part 2. Program paused. Press enter to continue.\n');
 pause;
 
 
@@ -100,7 +100,7 @@ for i = 1:size(X_norm, 1)
 end
 hold off
 
-fprintf('Program paused. Press enter to continue.\n');
+fprintf('Part 3. Program paused. Press enter to continue.\n');
 pause;
 
 %% =============== Part 4: Loading and Visualizing Face Data =============
@@ -115,7 +115,7 @@ load ('ex7faces.mat')
 %  Display the first 100 faces in the dataset
 displayData(X(1:100, :));
 
-fprintf('Program paused. Press enter to continue.\n');
+fprintf('Part 4. Program paused. Press enter to continue.\n');
 pause;
 
 %% =========== Part 5: PCA on Face Data: Eigenfaces  ===================
@@ -135,7 +135,7 @@ fprintf(['\nRunning PCA on face dataset.\n' ...
 %  Visualize the top 36 eigenvectors found
 displayData(U(:, 1:36)');
 
-fprintf('Program paused. Press enter to continue.\n');
+fprintf('Part 5. Program paused. Press enter to continue.\n');
 pause;
 
 
@@ -175,7 +175,7 @@ displayData(X_rec(1:100,:));
 title('Recovered faces');
 axis square;
 
-fprintf('Program paused. Press enter to continue.\n');
+fprintf('Part 7. Program paused. Press enter to continue.\n');
 pause;
 
 
@@ -231,5 +231,5 @@ Z = projectData(X_norm, U, 2);
 figure;
 plotDataPoints(Z(sel, :), idx(sel), K);
 title('Pixel dataset plotted in 2D, using PCA for dimensionality reduction');
-fprintf('Program paused. Press enter to continue.\n');
+fprintf('Part 8. Program paused. Press enter to continue.\n');
 pause;
